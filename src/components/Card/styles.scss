@@ -1,19 +1,23 @@
 .card {
-  height: 100px;
   width: 50%;
-
-  background: #735bf2;
-  color: #fff;
-
+  background: #E6E6E6;
+  color: #252525;
   border-radius: 10px;
-  margin-bottom: 20px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 24px;
+  padding: 16px;
+  margin-bottom: .7rem;
 }
 
 .card strong {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   font-size: 18px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.card small {
+  display: flex;
+  justify-content: end;
+  margin-top: .5rem;
 }

@@ -32,28 +32,28 @@
   background: #E6E6E6;
   border-radius: 5px;
   border: none;
-
+  color: #252525;
   font-size: 16px;
 }
 
-.container button {
+button {
   width: 50%;
-  padding: 24px;
-  font-weight: 700;
-
-  background: #EA4C89;
-  color: #FFFFFF;
-  
+  margin: 12px 0 60px;
+  color: #306823;
+  font-size: 17px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #43e622;
+  border: 1px solid #83ee88;
   border-radius: 5px;
-  margin: 12px 0 84px;
-  border: none;
-
+  padding: 20px;
+  box-shadow: 0px 6px 0px #13a000;
+  transition: all .1s;
   cursor: pointer;
-  transition: filter 0.2s;
-
-  font-size: 16px;
 }
-
-.container button:hover {
-  filter: brightness(0.9);
+ 
+button:active {
+  box-shadow: 0px 2px 0px #13a000;
+  position: relative;
+  top: 4px;
 }

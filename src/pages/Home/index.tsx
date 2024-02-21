@@ -1,14 +1,28 @@
-import React, { useState, useEffect } from 'react';
 import './styles.scss';
+import { useState, useEffect } from 'react';
+import { Card, CardProps } from '../../components/Card';
 
-import { Card } from '../../components/Card';
+interface UserResponse {
+  name: string
+  avatar_url: string
+}
+
+interface User {
+  name: string
+  avatar: string
+}
 
 export function Home() {
   const [studentName, setStudentName] = useState('');
-  const [students, setStudents] = useState([]);
-  const [user, setUser] = useState({ name: '', avatar: '' });
+  const [students, setStudents] = useState<CardProps[]>([]);
+  const [user, setUser] = useState<User>({} as User);
 
   function handleAddStudent() {
+    if(!studentName){
+      alert('Por favor, digite seu nome!')
+      return
+    }
+
     const newStudent = {
       name: studentName,
       time: new Date().toLocaleTimeString("pt-br", {
@@ -24,9 +38,9 @@ export function Home() {
 
   useEffect(() => {
     async function fetchData() {
-      const response = await fetch('https://api.github.com/users/rodrigorgtic');
-      const data = await response.json();
-      console.log("DADOS ===> ", data);
+      const response = await fetch('https://api.github.com/users/DDR23');
+      const data = await response.json() as UserResponse;
+      console.log("data", data);
 
       setUser({
         name: data.name,
@@ -52,6 +66,11 @@ export function Home() {
         type="text"
         placeholder="Digite o nome..."
         onChange={e => setStudentName(e.target.value)}
+        onKeyDown={e => {
+          if (e.key === 'Enter') {
+            handleAddStudent()
+          }
+        }}
       />
 
       <button type="button" onClick={handleAddStudent}>
