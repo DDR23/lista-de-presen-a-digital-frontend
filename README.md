@@ -10,7 +10,53 @@
 
 ## 💻 Projeto
 
-lista_presenca
+iniciando projeto
+
+```bash
+npm i
+```
+```bash
+npm i -D sass
+```
+
+instalando typescript
+```bash
+npm i typescript --save-dev
+```
+```bash
+npm i --save-dev @types/react
+```
+
+adicionando arquivo tsconfig.json
+```json
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
+    ],
+    "allowJs": false,
+    "skipLibCheck": false,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx"
+  },
+  "include": [
+    "./src"
+  ]
+}
+```
+
 
 ## 📝 Licença
 
