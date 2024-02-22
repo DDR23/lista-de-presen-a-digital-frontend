@@ -15,11 +15,23 @@
     font-weight: 400;
     text-transform: capitalize;
     padding: .3rem;
+    font-size: $tam-font-18;
   }
   
   small {
     display: flex;
     justify-content: end;
     margin-top: .5rem;
+    font-size: $tam-font-12;
+  }
+}
+
+@include viewport(xs){
+  .card strong{
+    font-size: $tam-font-14;
+  }
+
+  .card small{
+    font-size: $tam-font-10;
   }
 }

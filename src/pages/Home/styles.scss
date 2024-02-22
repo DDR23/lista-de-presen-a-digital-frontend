@@ -14,6 +14,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    h1{
+      font-size: $tam-font-32;
+    }
   }
 
   &__main{
@@ -23,12 +27,12 @@
     max-width: 90vw;
 
     input{
-      padding: 24px;
+      padding: 20px;
       background: $cor-branco;
       border-radius: 5px;
       border: none;
       color: $cor-preto;
-      font-size: 16px;
+      font-size: $tam-font-16;
     }
     
     button{
@@ -36,7 +40,7 @@
       max-width: 90vw;
       margin: 1rem 0 4rem;
       color: $cor-marca-dagua;
-      font-size: 18px;
+      font-size: $tam-font-16;
       font-weight: bold;
       text-transform: uppercase;
       background-color: $cor-verde;
@@ -66,7 +70,7 @@
     margin-bottom: 4rem;
   }
 
-  &__cradits{
+  &__credits{
     display: flex;
     margin: 2rem;
     
@@ -83,11 +87,39 @@
       justify-content: center;
       align-items: flex-end;
       font-family: 'Space Mono', monospace;
-      font-size: 12px;
+      font-size: $tam-font-12;
     }
 
     a{
       border-radius: 50%;
     }
+  }
+}
+
+@include viewport(xs){
+  .home{
+    &__header h1{
+      font-size: $tam-font-22;
+    }
+
+    &__main input{
+      font-size: $tam-font-14;
+    }
+
+    &__main button{
+      font-size: $tam-font-14;
+    }
+
+    &__credits{
+      p{
+        font-size: $tam-font-10;
+      }
+
+      img{
+        width: 46px;
+        height: 46px;
+        border-radius: 23px;
+      }
+    } 
   }
 }

@@ -77,7 +77,7 @@ export function Home() {
             />
           ))}
         </div>
-        <div className="home__cradits">
+        <div className="home__credits">
           <div>
             <p>Desenvolvido por</p>
             <p>{user.name}</p>
