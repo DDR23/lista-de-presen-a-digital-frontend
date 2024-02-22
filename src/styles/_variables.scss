@@ -16,22 +16,3 @@ $tam-font-16: 1rem;
 $tam-font-14: 0.875rem;
 $tam-font-12: 0.75rem;
 $tam-font-10: 0.625rem;
-
-
-
-// MEDIA-QUERY---------------------------------------
-@mixin viewport($breakpoints){
-  $devices:(
-      xs: 320px,
-      sm: 480px,
-      smd: 600px,
-      md: 768px,
-      lg: 992px,
-      xl: 1200px
-  );
-  $breakpoint: map-get($devices, $breakpoints);
-  
-  @media(max-width: $breakpoint){
-      @content
-  }
-}

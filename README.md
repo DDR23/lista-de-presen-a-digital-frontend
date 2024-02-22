@@ -1,23 +1,18 @@
-<p align="center">
-  <img alt="Rocketseat Education" src="https://avatars.githubusercontent.com/u/69590972?s=200&v=4" width="100px" />
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/static/v1?label=Rocketseat&message=Education&color=8257e5&labelColor=202024" alt="Rocketseat Project" />
-  <a href="LICENSE"><img  src="https://img.shields.io/static/v1?label=License&message=MIT&color=8257e5&labelColor=202024" alt="License"></a>
-</p>
-
-
 ## 💻 Projeto
 
-iniciando projeto
+Nesse projeto proposto pela Rocketseat, o objetivo foi fazer uma migração de um projeto escrito em JSX para TSX, abordando conceitos basicos de instalação de dependencias, consfigurações basicas do typescript e tipagem. Por escolha minha tambem foi adicionado conceitos de sass e reponsividade.
 
+<br />
+<br />
+
+iniciando projeto
 ```bash
 npm i
 ```
 ```bash
 npm i -D sass
 ```
+<br />
 
 instalando typescript
 ```bash
@@ -29,6 +24,7 @@ npm i --save-dev @types/react
 ```bash
 npm i --save-dev @types/react-dom
 ```
+<br />
 
 adicionando arquivo tsconfig.json
 ```json
@@ -59,29 +55,3 @@ adicionando arquivo tsconfig.json
   ]
 }
 ```
-
-
-## 📝 Licença
-
-Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
----
-
-<p align="center">
-  Feito com 💜 by Rocketseat
-</p>
-
-
-<!--START_SECTION:footer-->
-
-<br />
-<br />
-
-<p align="center">
-  <a href="https://discord.gg/rocketseat" target="_blank">
-    <img align="center" src="https://storage.googleapis.com/golden-wind/comunidade/rodape.svg" alt="banner"/>
-  </a>
-</p>
-
-<!--END_SECTION:footer-->
-
