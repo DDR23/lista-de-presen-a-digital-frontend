@@ -18,7 +18,7 @@ export function Home() {
   const [user, setUser] = useState<User>({} as User);
 
   function handleAddStudent() {
-    if(!studentName){
+    if (!studentName) {
       alert('Por favor, digite seu nome!')
       return
     }
@@ -35,12 +35,10 @@ export function Home() {
     setStudents(prevState => [...prevState, newStudent]);
   }
 
-
   useEffect(() => {
     async function fetchData() {
       const response = await fetch('https://api.github.com/users/DDR23');
       const data = await response.json() as UserResponse;
-      console.log("data", data);
 
       setUser({
         name: data.name,
@@ -52,40 +50,41 @@ export function Home() {
   }, []);
 
   return (
-    <div className="container">
-      <header>
-        <h1>Lista de Presença</h1>
-
-        <div>
-          <strong>{user.name}</strong>
-          <img src={user.avatar} alt="Foto de perfil" />
+    <>
+      <div className="home">
+        <div className="home__header">
+          <h1>Lista de Presença</h1>
         </div>
-      </header>
-
-      <input
-        type="text"
-        placeholder="Digite o nome..."
-        onChange={e => setStudentName(e.target.value)}
-        onKeyDown={e => {
-          if (e.key === 'Enter') {
-            handleAddStudent()
-          }
-        }}
-      />
-
-      <button type="button" onClick={handleAddStudent}>
-        Adicionar
-      </button>
-
-      {
-        students.map(student => (
-          <Card
-            key={student.time}
-            name={student.name}
-            time={student.time}
+        <div className="home__main">
+          <input
+            type="text"
+            placeholder="Digite o nome..."
+            onChange={e => setStudentName(e.target.value)}
+            onKeyDown={e => {
+              if (e.key === 'Enter') {
+                handleAddStudent()
+              }
+            }}
           />
-        ))
-      }
-    </div>
+          <button type="button" onClick={handleAddStudent}>Adicionar</button>
+        </div>
+        <div className="home__content">
+          {students.map((student, index) => (
+            <Card
+              key={index}
+              name={student.name}
+              time={student.time}
+            />
+          ))}
+        </div>
+        <div className="home__cradits">
+          <div>
+            <p>Desenvolvido por</p>
+            <p>{user.name}</p>
+          </div>
+          <a href="https://github.com/DDR23" target='_blank'><img src={user.avatar} alt="Foto de perfil" /></a>
+        </div>
+      </div>
+    </>
   )
 }

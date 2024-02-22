@@ -1,23 +1,25 @@
-.card {
-  width: 50%;
-  background: #E6E6E6;
-  color: #252525;
-  border-radius: 10px;
-  padding: 16px;
-  margin-bottom: .7rem;
-}
+@use '../../styles/variables' as *;
 
-.card strong {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 18px;
-  font-weight: 400;
-  text-transform: capitalize;
-}
+.card{
+  width: 60rem;
+  max-width: 90vw;
+  background: $cor-branco;
+  color: $cor-preto;
+  border-radius: 5px;
+  padding: .5rem;
 
-.card small {
-  display: flex;
-  justify-content: end;
-  margin-top: .5rem;
+  strong {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 400;
+    text-transform: capitalize;
+    padding: .3rem;
+  }
+  
+  small {
+    display: flex;
+    justify-content: end;
+    margin-top: .5rem;
+  }
 }

@@ -26,6 +26,9 @@ npm i typescript --save-dev
 ```bash
 npm i --save-dev @types/react
 ```
+```bash
+npm i --save-dev @types/react-dom
+```
 
 adicionando arquivo tsconfig.json
 ```json

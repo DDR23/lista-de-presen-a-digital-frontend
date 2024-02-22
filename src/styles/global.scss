@@ -1,14 +1,26 @@
+@use '../styles/variables' as *;
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body, input, button {
-  font-size: 16px;
+body, input {
+  max-width: 100vw;
+  overflow-x: hidden;
   font-family: 'Roboto', sans-serif;
-  background-color: #252525;
-  color: aliceblue;
+  background-color: $cor-preto;
+  color: $cor-branco;
 
   -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+::selection{
+  color: $cor-verde-shadow;
+  background-color: $cor-verde-hover;
 }
