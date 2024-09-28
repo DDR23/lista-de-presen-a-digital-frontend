@@ -1,57 +1,18 @@
-## 💻 Projeto
+# atividade---FRONTEND---lista-de-presença-com-typescript---ROCKETSEAT
 
+## Sobre o projeto
 Nesse projeto proposto pela Rocketseat, o objetivo foi fazer uma migração de um projeto escrito em JSX para TSX, abordando conceitos basicos de instalação de dependencias, consfigurações basicas do typescript e tipagem. Por escolha minha tambem foi adicionado conceitos de sass e reponsividade.
 
-<br />
-<br />
+Projeto hospedado em: 
 
-iniciando projeto
-```bash
-npm i
-```
-```bash
-npm i -D sass
-```
-<br />
+## Comandos para rodar o projeto
 
-instalando typescript
 ```bash
-npm i typescript --save-dev
+  npm i
 ```
 ```bash
-npm i --save-dev @types/react
+  npm run dev
 ```
-```bash
-npm i --save-dev @types/react-dom
-```
-<br />
 
-adicionando arquivo tsconfig.json
-```json
-{
-  "compilerOptions": {
-    "target": "ESNext",
-    "useDefineForClassFields": true,
-    "lib": [
-      "DOM",
-      "DOM.Iterable",
-      "ESNext"
-    ],
-    "allowJs": false,
-    "skipLibCheck": false,
-    "esModuleInterop": false,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "module": "ESNext",
-    "moduleResolution": "Node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
-  },
-  "include": [
-    "./src"
-  ]
-}
-```
+## Screenshots
+![App Screenshot](/public/picture_01.png)
