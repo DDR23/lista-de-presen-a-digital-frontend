@@ -1,4 +1,4 @@
-# atividade---FRONTEND---lista-de-presença-com-typescript---ROCKETSEAT
+# lista-de-presença-digital-frontend
 
 ## Sobre o projeto
 Nesse projeto proposto pela Rocketseat, o objetivo foi fazer uma migração de um projeto escrito em JSX para TSX, abordando conceitos basicos de instalação de dependencias, consfigurações basicas do typescript e tipagem. Por escolha minha tambem foi adicionado conceitos de sass e reponsividade.
